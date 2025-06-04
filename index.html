@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Suscripciones Web Component</title>
+    <script type="module" src="/components/standar/suscripcion.js"></script>
+    <link rel="stylesheet" href="/styles/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <nav>
+        <button onclick="location.href='/lit.html'">Cambiar a Lit Element</button>
+      </nav>
+
+      <h1>Web Component - Standard Method</h1>
+      <h2>Suscripciones</h2>
+
+      <main id="contenedor-suscripciones">
+        <suscripcion-item
+          titulo="Basic"
+          visitas="500"
+          precio="0"
+          precio-final="0 incl. 21% Vat"
+          descripcion="Basic tarif is built for those users who want to try and grow with our app without paying."
+          features='["Daily visits", "Monthly visits reporting", "Google Analytics Integration", "Facebook Integration", "Basic Dashboard", "Email Support"]'
+        ></suscripcion-item>
+
+        <suscripcion-item 
+          titulo="Freelance"
+          visitas="10 000"
+          precio="16"
+          precio-final="18 incl. 21% Vat"
+          descripcion="Freelance tarif matching the analytics tool for clients. Get fast insights and make real time decisions."
+          features='["Twitter Integration", "Instagram integration", "Advanced Dashboard", "Acquisitions Dashboard", "Client Billing", "Client Dashboard", "Reporting tool", "Multiple accounts", "Support"]'
+        ></suscripcion-item>
+        <suscripcion-item 
+          titulo="Business"
+          visitas="100 000"
+          precio="49"
+          precio-final="56 incl. 21% Vat"
+          descripcion="Business plan is tailored exactly for fast growing companies and startups who needs deep analytics insights."
+          features='["Competitor Dashboard", "Behavior Dashboard", "SEO Dashboard", "Full API control", "Advanced Reporting", "User permissions", "Advanced Support"]'
+        ></suscripcion-item>
+        <suscripcion-item 
+          titulo="Enterprise"
+          visitas="1 000 000"
+          precio="129"
+          precio-final="146 incl. 21% Vat"
+          descripcion="Basic tarif isbuild for those users who want to try and grow with our app without paying. It's like the 'grow with us package'."
+          features='["Custom Domain", "White Label solution", "Rich Snippets", "Team Insights Dashboard", "24/7 Support"]'
+        ></suscripcion-item>
+      </main>
+      <script>
+        window.addEventListener("DOMContentLoaded", () => {
+          const items = document.querySelectorAll("suscripcion-item");
+          items.forEach(item => {
+            item.addEventListener("suscripcion-click", e => {
+              alert(`¡Suscripción seleccionada en StandarItem: ${e.detail.titulo || "sin título"}!`);
+            });
+          });
+        });
+      </script>
+
+    </div>
+  </body>
+</html>
