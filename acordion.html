@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Acordion Web Component</title>
+    <script type="module" src="/components/standard/acordion.js"></script>
+    <link rel="stylesheet" href="/styles/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <nav>
+        <button onclick="location.href='/acordionlit.html'">Cambiar a Lit Element</button>
+        <button onclick="location.href='/index.html'">Cambiar a Suscripciones</button>
+      </nav>
+
+      <h1>Web Component - Standard Method</h1>
+      <h2>Acordiones</h2>
+
+      <main id="contenedor-acordion">
+        <acordion-item>
+          <span slot="titulo">¿Qué son los Web Components?</span>
+          <p slot="contenido">Tecnología nativa de los navegadores para crear componentes reutilizables y encapsulados sin frameworks.</p>
+        </acordion-item>
+
+        <acordion-item>
+          <span slot="titulo">¿Para qué sirve el Shadow DOM?</span>
+          <p slot="contenido">Sirve para encapsular estructura, estilo y comportamiento, evitando conflictos con el resto del DOM.</p>
+        </acordion-item>
+
+        <acordion-item>
+          <span slot="titulo">¿Qué es un Custom Element?</span>
+          <p slot="contenido">Un elemento HTML definido por el usuario, como &lt;acordion-item&gt;, que puede tener funcionalidad personalizada.</p>
+        </acordion-item>
+      </main>
+    </div>
+  </body>
+</html>

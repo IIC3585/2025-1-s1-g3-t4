@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Acordion Web Component - Lit</title>
+    <script type="module" src="/components/lit/acordionLit.js"></script>
+    <link rel="stylesheet" href="/styles/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <nav>
+        <button onclick="location.href='/acordion.html'">Cambiar a Standard Method</button>
+        <button onclick="location.href='/lit.html'">Cambiar a Suscripciones</button>
+      </nav>
+
+      <h1>Web Component - Lit Element</h1>
+      <h2>Acordion</h2>
+
+      <main id="contenedor-acordion">
+        <acordion-lit titulo="¿Qué es Lit?">
+          Lit es una biblioteca ligera para crear Web Components con sintaxis moderna, reactiva y eficiente.
+        </acordion-lit>
+
+        <acordion-lit titulo="¿Qué ventajas ofrece?">
+          Encapsulamiento, rendimiento, y una curva de aprendizaje amigable para quienes conocen HTML y JS.
+        </acordion-lit>
+
+        <acordion-lit titulo="¿Cómo se integra con proyectos?">
+          Se usa con módulos ES estándar y es compatible con cualquier entorno que soporte Web Components.
+        </acordion-lit>
+      </main>
+    </div>
+  </body>
+</html>

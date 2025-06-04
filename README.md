@@ -37,6 +37,31 @@ Nota: para ambos estilos, el componente recibe los atributos:
 - Renderiza contenido con funciones `html\`.
 - Usa `updated()` para transformar el atributo `features` si viene como string.
 
+# Acordeón Item Web Component
+
+Nota: para ambos estilos, el componente recibe los atributos:
+
+- `titulo`
+- `contenido`
+
+
+## Versión Estándar (`acordion.js`)
+
+- `Custom Elements`: se define una clase que extiende de `HTMLElement`.
+- `Shadow DOM`: encapsula el estilo y contenido con `attachShadow({ mode: 'open' })`.
+- `Template HTML`: se usa un `<template>` para definir la estructura del componente.
+- `Slots nombrados`: se usan para insertar contenido (`slot name="titulo"` y `slot name="contenido"`).
+- `Cierre automatico`: al abrir un acordeón, se cierran los demás mediante un `toggle` listener que recorre todos los componentes activos en la página.
+
+
+
+## Versión con Lit (`acordionLit.js`)
+- Utiliza `LitElement`, `html` y `css` desde la librería `lit`.
+- `Propiedades reactivas`: `titulo` y `abierto` se declaran como propiedades.
+- `Estilos encapsulados`: definidos en `static styles`.
+- Renderiza contenido con funciones `html\`.
+- `Control de apertura`: el componente despacha internamente el cierre de los otros acordeones usando `document.querySelectorAll()` en `toggle`.
+
 
 # Recursos consultados:
 Para ambas partes se visitaron repositorios del curso correspondientes al 2024, para entender mejor el flujo de como se desarrollaban los componentes, específicamente los repositorios visitados fueron del grupo 1, 5 y 7.
