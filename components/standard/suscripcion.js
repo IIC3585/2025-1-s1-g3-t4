@@ -10,13 +10,21 @@ class SuscripcionItem extends HTMLElement {
         border: 1px solid #ccc;
         border-radius: 12px;
         padding: 16px;
-        margin: 16px;
         width: 250px;
         font-family: sans-serif;
         box-shadow: 0 2px 5px rgba(21, 21, 21, 0.67);
         background: rgba(67, 67, 67, 0.67);
         color: white;
+        transition: all 0.3s ease;
+        transform-origin: center;
       }
+
+      .card:hover {
+        transform: scale(1.05); 
+        background: rgba(100, 100, 100, 0.85);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+      }
+
       h2 {
         margin: 0;
         font-size: 1.8rem;

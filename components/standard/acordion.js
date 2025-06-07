@@ -43,7 +43,10 @@ class AcordionItem extends HTMLElement {
       </style>
       <details>
         <summary><slot name="titulo">Título</slot></summary>
-        <div class="content"><slot name="contenido">Contenido aquí</slot></div>
+        <div class="content">
+        <slot name="contenido">Contenido aquí</slot>
+        <slot></slot>
+        </div>
       </details>
     `;
 
@@ -51,17 +54,18 @@ class AcordionItem extends HTMLElement {
   }
 
   connectedCallback() {
-    const details = this.shadowRoot.querySelector('details');
+    // comente esto para poder ver los slots anidados
+    // const details = this.shadowRoot.querySelector('details');
 
-    details.addEventListener('toggle', () => {
-      if (details.open) {
-        document.querySelectorAll('acordion-item').forEach(el => {
-          if (el !== this) {
-            el.shadowRoot.querySelector('details').open = false;
-          }
-        });
-      }
-    });
+    // details.addEventListener('toggle', () => {
+    //   if (details.open) {
+    //     document.querySelectorAll('acordion-item').forEach(el => {
+    //       if (el !== this) {
+    //         el.shadowRoot.querySelector('details').open = false;
+    //       }
+    //     });
+    //   }
+    // });
   }
 }
 

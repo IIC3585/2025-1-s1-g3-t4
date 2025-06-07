@@ -10,13 +10,13 @@ export class AcordionLit extends LitElement {
     :host {
       display: block;
       font-family: sans-serif;
-      margin-bottom: 12px;
     }
 
     .card {
       border: 1px solid #ccc;
       border-radius: 8px;
       overflow: hidden;
+      margin: 8px 0;
     }
 
     summary {
@@ -55,21 +55,22 @@ export class AcordionLit extends LitElement {
         <summary>${this.titulo}</summary>
         <div class="content">
           <slot></slot>
+          <slot></slot>
         </div>
       </details>
     `;
   }
 
   _onToggle(e) {
-    if (e.target.open) {
-      const all = document.querySelectorAll('acordion-lit');
-      all.forEach(el => {
-        if (el !== this) el.abierto = false;
-      });
-      this.abierto = true;
-    } else {
-      this.abierto = false;
-    }
+    // if (e.target.open) {
+    //   const all = document.querySelectorAll('acordion-lit');
+    //   all.forEach(el => {
+    //     if (el !== this) el.abierto = false;
+    //   });
+    //   this.abierto = true;
+    // } else {
+    //   this.abierto = false;
+    // }
   }
 }
 
