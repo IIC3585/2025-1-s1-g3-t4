@@ -51,7 +51,7 @@ Nota: para ambos estilos, el componente recibe los atributos:
 - `Shadow DOM`: encapsula el estilo y contenido con `attachShadow({ mode: 'open' })`.
 - `Template HTML`: se usa un `<template>` para definir la estructura del componente.
 - `Slots nombrados`: se usan para insertar contenido (`slot name="titulo"` y `slot name="contenido"`).
-- `Cierre automatico`: al abrir un acordeón, se cierran los demás mediante un `toggle` listener que recorre todos los componentes activos en la página.
+- `Cierre automatico`: al abrir un acordeón, se cierran los demás mediante un `toggle` listener que recorre todos los componentes activos en la página. **Importante:** El cierre automatico fue comentado para poder añadir la anidación de acordeones o `slots`.
 
 
 
@@ -60,7 +60,7 @@ Nota: para ambos estilos, el componente recibe los atributos:
 - `Propiedades reactivas`: `titulo` y `abierto` se declaran como propiedades.
 - `Estilos encapsulados`: definidos en `static styles`.
 - Renderiza contenido con funciones `html\`.
-- `Control de apertura`: el componente despacha internamente el cierre de los otros acordeones usando `document.querySelectorAll()` en `toggle`.
+- `Control de apertura`: el componente despacha internamente el cierre de los otros acordeones usando `document.querySelectorAll()` en `toggle`. **Importante:** El cierre automatico fue comentado para poder añadir la anidación de acordeones o `slots`.
 
 
 # Recursos consultados:
